@@ -1,12 +1,12 @@
 # Rick and Morty API
 
-## Descripción del Proyecto
+## Project Description
 
-Esta es una API REST basada en la popular serie de televisión *Rick and Morty*. La API proporciona información detallada sobre los personajes, episodios y ubicaciones del universo de Rick and Morty. Este proyecto está diseñado para ayudar a los desarrolladores a acceder a datos de la serie de manera sencilla y eficiente.
+This is a REST API based on the popular TV series *Rick and Morty*. The API provides detailed information about the characters, episodes and locations of the Rick and Morty universe. This project is designed to help developers access data from the series easily and efficiently.
 
-## Estructura del Proyecto
+## Project Structure
 
-La estructura del proyecto está organizada de la siguiente manera:
+The structure of the project is organized as follows:
 
 rick-and-morty-api/
 ├── api-rest/
@@ -23,40 +23,47 @@ rick-and-morty-api/
 └── readme.md
 
 
-### Descripción de Directorios
+### Description of Directories
 
-- **api-rest/**: Contiene los endpoints para las operaciones CRUD
+- **api-rest/**: Contains the endpoints for the CRUD operations.
 
-- **includes/**: Contiene las clases php de las entidades del proyecto
+- **includes/**: Contains the php classes of the project's entities
 
-- **model-design/**: contiene el diagrama ER de la base de datos relacional, el script de montaje, las queries usadas y el archivo mwb de MySQL Workbench
+- **model-design/**: contains the ER diagram of the relational database, the assembly script, the queries used and the MySQL Workbench mwb file.
 
-- **unitTests/**: Contiene las pruebas unitarias para las clases.
+- **unitTests/**: Contains the unit tests for the classes.
 
-- **.gitignore**: Archivos y directorios que Git debe ignorar.
+- **.gitignore**: Files and directories that Git should ignore.
 
-- **README.md**: Documentación principal del proyecto.
+- **README.md**: Main project documentation.
 
 
 ## Instalación
 
-Para instalar y ejecutar esta API en tu entorno local, sigue estos pasos:
+To install and run this API in your local environment, follow these steps:
 
-1. **Clonar el repositorio:**
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/mauriciorivero/rick-and-morty-api-backend.git
    cd rick-and-morty-api-backend
 
-2. **Corre en phpmyadmin (MySQL) el script:**
+2. **Run in phpmyadmin (MySQL) the script:**
    ```bash
    rick-and-morty-script-db
 
-3. **Ingresar los parametros de entrada para la clase Database.class:**
+3. **Enter the input parameters for the Database.class:**
     ```bash
         $host = "localhost:8889";
         $user = "root";
         $password = "root";
         $database = "rick-and-mort-api";
-    de acuerdo al motor de tu computadora
+    according to your computer engine and configuration
 
-4. 
+4. **Test the endpoints (you can use an application such as RapidAPI for this task):**
+    ```bash
+        GET http://localhost:8888/rick-and-morty-api-backend/api-rest/get_all_episode.php
+        GET http://localhost:8888/rick-and-morty-api-backend/api-rest/get_all_episode_by_ch.php?ch_id=1
+        GET http://localhost:8888/rick-and-morty-api-backend/api-rest/get_all_character.php
+        GET http://localhost:8888/rick-and-morty-api-backend/api-rest/get_all_character_by_ep.php?ep_id=1
+        POST http://localhost:8888/rick-and-morty-api-backend/api-rest/create_character.php?name=Alicia&status=Alive&species=Human&Gener=Female&image=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F372.jpeg&created=2024-06-20&isActive=1
+        
