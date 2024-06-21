@@ -1,38 +1,51 @@
-# Rick and Morty API Rest
+# Rick and Morty API
 
-This is a API REST for providing the functionality of getting the episodes and characters of the animated series Rick and Morty.
+## Descripción del Proyecto
 
-## Getting Started
+Esta es una API REST basada en la popular serie de televisión *Rick and Morty*. La API proporciona información detallada sobre los personajes, episodios y ubicaciones del universo de Rick and Morty. Este proyecto está diseñado para ayudar a los desarrolladores a acceder a datos de la serie de manera sencilla y eficiente.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+## Estructura del Proyecto
+
+La estructura del proyecto está organizada de la siguiente manera:
+
+rick-and-morty-api/
+├── api-rest/
+├── includes/
+├── model-design/
+├── unitTests/
+├── vendor/
+├── .gitignore
+├── README.md
+├── gitignore.json
+├── composer-setup.php
+├── composer.json
+├── composer.phar
+└── readme.md
 
 
+### Descripción de Directorios
 
-### Installing
+- **api-rest/**: Contiene los endpoints para las operaciones CRUD
 
-A step by step series of examples that tell you how to get a development environment running.
+- **includes/**: Contiene las clases php de las entidades del proyecto
 
-1. Clone the repository
+- **model-design/**: contiene el diagrama ER de la base de datos relacional, el script de montaje, las queries usadas y el archivo mwb de MySQL Workbench
 
-```bash
-git clone https://github.com/your-username/your-repo.git
+- **unitTests/**: Contiene las pruebas unitarias para las clases.
 
-2. Install the dependencies
-composer install
+- **.gitignore**: Archivos y directorios que Git debe ignorar.
 
-the model-design folder contain the E-R diagram for the database design, the queries used and the mwb file for MySQL workbench
+- **README.md**: Documentación principal del proyecto.
 
 
-```bash
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+## Instalación
 
-Versioning
-We use SemVer for versioning. For the versions available, see the tags on this repository.
+Para instalar y ejecutar esta API en tu entorno local, sigue estos pasos:
 
-Authors
-Your Name - Initial work - YourUsername
-See also the list of contributors who participated in this project.
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/mauriciorivero/rick-and-morty-api-backend.git
+   cd rick-and-morty-api-backend
 
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details
+Instalar las dependencias:
+npm install
