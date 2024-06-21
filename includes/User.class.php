@@ -22,24 +22,25 @@
         }
 
         public static function login_user($username, $pass){
-            $now = strtotime("now");
-            $key = $pass;
-            $payload = [
-                'exp' -> $now + 3600,
-                'data' -> '1'
-            ];
-            $jwt = JWT::encode($payload, $key, 'HS256');
-            $decoded = JWT::decode($jwt, new Key($key, 'HS256'));
-            print_r($decoded);
             $database = new Database();
             $conn = $database->get_connection();
-            $query = $conn->prepare("SELECT * FROM USER WHERE username = :username");
+            $query = $conn->prepare("SELECT * FROM USER WHERE username = :username
+                                    AND pass = :pass");
             $query->bindParam(':username', $username);
+            $query->bindParam(':pass', $pass);
             $query->execute();
             $user = $query->fetch(PDO::FETCH_ASSOC);
             
             if ($user && password_verify($pass, $user['pass'])) {
-                $jwt_token = // Generate JWT token here
+                $now = strtotime("now");
+                $key = APPLICATION_PASS_MAO;
+                $payload = [
+                    'exp' -> $now + 3600,
+                    'data' -> $user['id']
+                ];
+                
+                $decoded = JWT::decode($jwt, new Key($key, 'HS256'));
+                $jwt_token = JWT::encode($payload, $key, 'HS256');
                 return $jwt_token;
             } else {
                 return false; // Login failed
