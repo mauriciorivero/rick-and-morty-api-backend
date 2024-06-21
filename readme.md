@@ -66,4 +66,7 @@ To install and run this API in your local environment, follow these steps:
         GET http://localhost:8888/rick-and-morty-api-backend/api-rest/get_all_character.php
         GET http://localhost:8888/rick-and-morty-api-backend/api-rest/get_all_character_by_ep.php?ep_id=1
         POST http://localhost:8888/rick-and-morty-api-backend/api-rest/create_character.php?name=Alicia&status=Alive&species=Human&Gener=Female&image=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F372.jpeg&created=2024-06-20&isActive=1
-        
+        .
+        .
+        .
+        . Por terminar
