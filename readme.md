@@ -47,7 +47,16 @@ Para instalar y ejecutar esta API en tu entorno local, sigue estos pasos:
    git clone https://github.com/mauriciorivero/rick-and-morty-api-backend.git
    cd rick-and-morty-api-backend
 
-2. **Corre en phpmyadmin el script:**
+2. **Corre en phpmyadmin (MySQL) el script:**
    ```bash
    rick-and-morty-script-db
 
+3. **Ingresar los parametros de entrada para la clase Database.class:**
+    ```bash
+        $host = "localhost:8889";
+        $user = "root";
+        $password = "root";
+        $database = "rick-and-mort-api";
+    de acuerdo al motor de tu computadora
+
+4. 
