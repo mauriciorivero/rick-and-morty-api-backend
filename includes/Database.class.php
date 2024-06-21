@@ -1,4 +1,7 @@
 <?php
+      ini_set('display_errors', 1);
+      ini_set('display_startup_errors', 1);
+      error_reporting(E_ALL);
 
     class Database{
         private $host = "localhost:8889";
@@ -6,14 +9,9 @@
         private $password = "root";
         private $database = "rick-and-mort-api";
 
-         /**
-         * Returns a PDO database connection object.
-         * @return PDO The PDO database connection object.
-         * @throws PDOException If there is an error connecting to the database.
-         */
-        public function getConnection(){
-            $hostDB = "mysql:host=".$this->host.";dbname=".$this->database.";";
 
+        public function get_connection(){
+            $hostDB = "mysql:host=".$this->host.";dbname=".$this->database.";";
             try{
                 $connection = new PDO($hostDB, $this->user, $this->password);
                 $connection -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
