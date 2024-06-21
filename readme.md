@@ -23,7 +23,7 @@ composer install
 the model-design folder contain the E-R diagram for the database design, the queries used and the mwb file for MySQL workbench
 
 
-
+```bash
 Contributing
 Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
 
