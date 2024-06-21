@@ -70,13 +70,15 @@ SET RM_CHARACTER = 1
 where EPISODE_id = 1
 and RM_CHARACTER_id = 2
 
--- remove character episode relation from episode
+-- remove episode relation from character
 DELETE FROM EPISODE_CHARACTER_RELATION 
 WHERE EPISODE_id=1;
+and RM_CHARACTER_id =2
 
--- remove character episode relation from character
+-- remove character relation from episode
 DELETE FROM EPISODE_CHARACTER_RELATION 
 WHERE RM_CHARACTER_id=1;
+WHERE EPISODE_id=1;
 
 -- remove episode
 DELETE FROM EPISODE
@@ -93,17 +95,17 @@ select * from RM_CHARACTER;
 select * EPISODE;
 
 -- get all characters of any given episode, 1 for example
-select ch.id, ch.name, ch.status, ch.species, ch.gender, ch.image
+SELECT ch.id, ch.name, ch.status, ch.species, ch.gender, ch.image
 FROM RM_CHARACTER as ch,  EPISODE as ep, EPISODE_CHARACTER_RELATION as rel
-where ch.id = rel.RM_CHARACTER_id
-and ep.id = rel.EPISODE_id
-and ep.id = 1
+WHERE ch.id = rel.RM_CHARACTER_id
+AND ep.id = rel.EPISODE_id
+AND ep.id = 1
 
 -- get all episodes of any given charcter, 1 for example
-select ep.id, ep.name, ep.air_date, ep.episode
+SELECT ep.id, ep.name, ep.air_date, ep.episode
 FROM RM_CHARACTER as ch,  EPISODE as ep, EPISODE_CHARACTER_RELATION as rel
-where ep.id = rel.EPISODE_id
-and ch.id = rel.RM_CHARACTER_id
-and ch.id = 1
+WHERE ep.id = rel.EPISODE_id
+AND ch.id = rel.RM_CHARACTER_id
+AND ch.id = 1
 
 
