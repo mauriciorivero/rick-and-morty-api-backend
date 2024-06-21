@@ -47,5 +47,7 @@ Para instalar y ejecutar esta API en tu entorno local, sigue estos pasos:
    git clone https://github.com/mauriciorivero/rick-and-morty-api-backend.git
    cd rick-and-morty-api-backend
 
-Instalar las dependencias:
-npm install
+2. **Corre en phpmyadmin el script:**
+   ```bash
+   rick-and-morty-script-db
+
