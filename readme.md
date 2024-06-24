@@ -69,21 +69,21 @@ To install and run this API in your local environment, follow these steps:
 
 5. **Test the endpoints (you can use an application such as RapidAPI for this task):**
     ```bash
-        //These is the endpoints for episodes
+        //These are the endpoints for episodes
         POST http://localhost:8888/rick-and-morty-api-backend/api-rest/create_episode.php?name=Episode%201&air_date=Dec,%2012%202024&episode=S02E03&created=2024-06-20&isActive=1
         GET http://localhost:8888/rick-and-morty-api-backend/api-rest/get_all_episode.php
         DELETE http://localhost:8888/rick-and-morty-api-backend/api-rest/delete_episode.php?id=12
 
-        //These is the endpoints for characters
+        //These are the endpoints for characters
         POST http://localhost:8888/rick-and-morty-api-backend/api-rest/create_character.php?name=Alicia&status=Alive&species=Human&Gener=Female&image=https%3A%2F%2Frickandmortyapi.com%2Fapi%2Fcharacter%2Favatar%2F372.jpeg&created=2024-06-20&isActive=1
         GET http://localhost:8888/rick-and-morty-api-backend/api-rest/get_all_character.php
         DELETE http://localhost:8888/rick-and-morty-api-backend/api-rest/delete_character.php?id=12
 
-        //These is the endpoints for the operations between episodes and characters
+        //These are the endpoints for the operations between episodes and characters
         POST http://localhost:8888/rick-and-morty-api-backend/api-rest/create_relationship_ep_ch.php?id_episode=1&id_character=1
         DELETE http://localhost:8888/rick-and-morty-api-backend/api-rest/delete_relationship_in_between.php?ep_id=1&ch_id=1
         GET http://localhost:8888/rick-and-morty-api-backend/api-rest/get_all_episode_by_ch.php?ch_id=1
         GET http://localhost:8888/rick-and-morty-api-backend/api-rest/get_all_character_by_ep.php?ep_id=1
 
-        //These is the endpoints for users
+        //These are the endpoints for users
         POST http://localhost:8888/rick-and-morty-api-backend/api-rest/create_user.php?name=Mauricio&lastname=Rivero&username=mauriciorivero&pass=pasZ12345-
