@@ -8,19 +8,19 @@ This is a REST API based on the popular TV series *Rick and Morty*. The API prov
 
 The structure of the project is organized as follows:
 
-rick-and-morty-api/
-├── api-rest/
-├── includes/
-├── model-design/
-├── unitTests/
-├── vendor/
-├── .gitignore
-├── README.md
-├── gitignore.json
-├── composer-setup.php
-├── composer.json
-├── composer.phar
-└── readme.md
+rick-and-morty-api/  
+├── api-rest/  
+├── includes/  
+├── model-design/  
+├── unitTests/  
+├── vendor/  
+├── .gitignore  
+├── README.md  
+├── gitignore.json  
+├── composer-setup.php  
+├── composer.json  
+├── composer.phar  
+└── readme.md  
 
 
 ### Description of Directories
